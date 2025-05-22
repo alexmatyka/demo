@@ -1,58 +1,31 @@
-# React + TypeScript + Vite
-
 # Run the app
 1. npm install
 2. npm run dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# User credentials
+- Login: test
+- Password: test
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+# Your approach and design choices
+I chose the technologies recommended in the task description: Headless UI, React Query, and Zustand.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+For styling, I used Tailwind CSS to gain experience with it, and because it's commonly used together with Headless UI.
+In reality, I used only a few components from Headless UI, but the integration worked smoothly.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# If you had to do a second iteration, what would you add or improve?
+1. Replace Tailwind with SCSS Modules.
+2. Personally, I’m not a big fan of Tailwind for large projects, but I gave it a shot because Headless UI works well with it.
+3. Add custom optimized fonts.
+4. Move components to Storybook and create a reusable component library with elements like Typography, Box, and Grid, possibly in a monorepo setup.
+5. Add responsive/adaptive design, and custom hooks to handle layout behavior based on screen size.
+6. Add unit and integration tests to ensure stability and reliability.
+7. Add import aliases (e.g. @components, @hooks) for cleaner and more maintainable code structure.
+8. Due to the tight deadline, the project includes components with only the basic logic necessary for this test task.
+In a real-world project, these components (such as tables, authentication, etc.) would need to be significantly extended and improved.
+9. add virtualization + interdsection observer for data loading instead of show more button
+10. add react hooks ( with zod for future extension )
+11. add  i18n for translations
+# demo
