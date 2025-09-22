@@ -2,7 +2,7 @@ import AppRouter from '@/router/router'
 import { useEffect } from 'react'
 import { useAuth } from '@/shared/hooks/useAuthStore.ts'
 
-// my new changes
+// my new changes 3
 export default function App() {
   const { checkAuth } = useAuth()
 
