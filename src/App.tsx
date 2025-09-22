@@ -5,7 +5,7 @@ import { useAuth } from '@/shared/hooks/useAuthStore.ts'
 // my new changes 3
 export default function App() {
   const { checkAuth } = useAuth()
-
+  // 4
   useEffect(() => {
     checkAuth()
     // we only need check it once
